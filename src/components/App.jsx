@@ -12,14 +12,16 @@ export default function App() {
   const [bad, setBad] = useState(0);
 
   const leaveFeedback = option => {
-    if (option === 'good') {
-      setGood(good => good + 1);
-    }
-    if (option === 'neutral') {
-      setNeutral(neutral => neutral + 1);
-    }
-    if (option === 'bad') {
-      setBad(bad => bad + 1);
+    switch (option) {
+      case 'good':
+        setGood(good => good + 1);
+        break;
+      case 'neutral':
+        setNeutral(neutral => neutral + 1);
+        break;
+      case 'bad':
+        setBad(bad => bad + 1);
+        break;
     }
   };
 

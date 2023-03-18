@@ -22,6 +22,8 @@ export default function App() {
       case 'bad':
         setBad(bad => bad + 1);
         break;
+      default:
+        alert('Невідоме значення');
     }
   };
 
